@@ -37,7 +37,7 @@ namespace TeamProjectHse272_2
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindow editwindow = new AddEditWindow(db.Products.ElementAt(dataGridMain.SelectedIndex).Model, db.Products.ElementAt(dataGridMain.SelectedIndex).Producer, db.Products.ElementAt(dataGridMain.SelectedIndex).Price, db.Products.ElementAt(dataGridMain.SelectedIndex).Quantity, db.Products.ElementAt(dataGridMain.SelectedIndex).category, "Edit");
+            AddEditWindow editwindow = new AddEditWindow(db.Products.ElementAt(dataGridMain.SelectedIndex).Model, db.Products.ElementAt(dataGridMain.SelectedIndex).Producer, db.Products.ElementAt(dataGridMain.SelectedIndex).Price, db.Products.ElementAt(dataGridMain.SelectedIndex).Quantity, db.Products.ElementAt(dataGridMain.SelectedIndex).Category, "Edit");
             editwindow.ShowDialog();
         }
 
