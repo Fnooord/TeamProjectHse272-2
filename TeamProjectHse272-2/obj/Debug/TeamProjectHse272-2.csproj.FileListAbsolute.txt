@@ -52,3 +52,4 @@ E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.dll
 E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.SqlServer.dll
 E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.xml
 E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.SqlServer.xml
+E:\TeamProjectHse272-2\TeamProjectHse272-2\obj\Debug\TeamProjectHse272-2_MarkupCompile.lref
