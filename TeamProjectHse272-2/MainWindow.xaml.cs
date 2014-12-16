@@ -60,11 +60,14 @@ namespace TeamProjectHse272_2
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            System.Windows.Data.CollectionViewSource productViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("productViewSource")));
             // Загрузите данные, установив свойство CollectionViewSource.Source:
             // productViewSource.Source = [универсальный источник данных]
             db.Products.Load();
-            productViewSource.Source = db.Products.Local;
+            DataContext =
+                new StoreViewModel
+                {
+                    Products = db.Products.Local
+                };
         }
     }
 }

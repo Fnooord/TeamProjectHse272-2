@@ -10,22 +10,30 @@ namespace TeamProjectHse272_2.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(TeamProjectHse272_2.Data.Context context)
         {
-            //  This method will be called after migrating to the latest version.
+            if (!context.Categories.Any(c => c.Name == "Smartphone"))
+            {
+                context.Categories.Add(
+                    new Category { Name = "Smartphone" });
+                context.SaveChanges();
+            }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            if (!context.Products.Any(p => p.Producer=="Sony" && p.Model=="Xperia"))
+            {
+                context.Products.Add(new Product
+                {
+                    Category = context.Categories.First(c => c.Name == "Smartphone"),
+                    Producer = "Sony",
+                    Model = "Xperia",
+                    Price = 100,
+                    Quantity = 4,
+                });
+                context.SaveChanges();
+            }
         }
     }
 }
