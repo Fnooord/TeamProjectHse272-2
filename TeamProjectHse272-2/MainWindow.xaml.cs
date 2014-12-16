@@ -37,12 +37,17 @@ namespace TeamProjectHse272_2
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindow editwindow = new AddEditWindow();
+            AddEditWindow editwindow = new AddEditWindow(db.Products.ElementAt(dataGridMain.SelectedIndex).Model, db.Products.ElementAt(dataGridMain.SelectedIndex).Producer, db.Products.ElementAt(dataGridMain.SelectedIndex).Price, db.Products.ElementAt(dataGridMain.SelectedIndex).Quantity, db.Products.ElementAt(dataGridMain.SelectedIndex).category, "Edit");
             editwindow.ShowDialog();
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
+            foreach (Product p in db.Products)
+            {
+                if (p.Id == dataGridMain.SelectedIndex)
+                    db.Products.Remove(p);
+            }            
             //[dataGridMain.SelectedIndex]
         }
 

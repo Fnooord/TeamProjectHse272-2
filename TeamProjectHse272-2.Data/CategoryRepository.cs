@@ -14,5 +14,20 @@ namespace TeamProjectHse272_2.Data
         {
             return _context.Categories;
         }
+        private bool _disposed;
+        public void Dispose()
+        {
+            if (_disposed)
+            {
+                return;
+            }
+            if (_context != null)
+            {
+                _context.Dispose();
+                _context = null;
+            }
+            _disposed = true;
+            GC.SuppressFinalize(this);
+        }
     }
 }
