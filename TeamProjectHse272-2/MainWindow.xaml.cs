@@ -39,7 +39,7 @@ namespace TeamProjectHse272_2
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-
+            //[dataGridMain.SelectedIndex]
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)

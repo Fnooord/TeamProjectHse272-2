@@ -46,3 +46,9 @@ C:\Documents\Прога\TeamProjectHse272-2\TeamProjectHse272-2\TeamProjectHse27
 C:\Documents\Прога\TeamProjectHse272-2\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.xml
 C:\Documents\Прога\TeamProjectHse272-2\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.SqlServer.xml
 C:\Documents\Прога\TeamProjectHse272-2\TeamProjectHse272-2\TeamProjectHse272-2\obj\Debug\TeamProjectHse272-2.pdb
+E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\TeamProjectHse272-2.exe
+E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\TeamProjectHse272-2.pdb
+E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.dll
+E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.SqlServer.dll
+E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.xml
+E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\EntityFramework.SqlServer.xml
