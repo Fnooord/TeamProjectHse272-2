@@ -22,7 +22,6 @@ namespace TeamProjectHse272_2
     {
         public MainWindow()
         {
-            Logic.DbInitialization();
             InitializeComponent();
         }
 

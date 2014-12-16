@@ -8,7 +8,7 @@ namespace TeamProjectHse272_2
 {
     class Logic
     {
-        public void DbInitialization ()
+        public static void DbInitialization ()
         {
             using (var db = new Context())
             {
