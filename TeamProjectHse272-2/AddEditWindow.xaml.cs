@@ -26,16 +26,16 @@ namespace TeamProjectHse272_2
 
         public AddEditWindow (string model, string producer, double price, int quantity, TeamProjectHse272_2.Data.Category category)
         {
-            ModelBox.Text = model;
-            ProducerBox.Text = producer;
+            NameBox.Text = model;
+            CompanyBox.Text = producer;
             PriceBox.Text = price.ToString();
-            QuantityBox.Text = quantity.ToString();
+            AmountBox.Text = quantity.ToString();
             ComboItem.Text = category.Name;
         }
 
         private void AddItem_Click(object sender, RoutedEventArgs e)
         {
-            TeamProjectHse272_2.Data.Product product = new TeamProjectHse272_2.Data.Product { Producer = ProducerBox.Text, Model = ModelBox.Text, Price = decimal.Parse(PriceBox.Text), Quantity = int.Parse(QuantityBox.Text) };
+
             Close();
         }
 

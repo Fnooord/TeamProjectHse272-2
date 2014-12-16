@@ -71,6 +71,3 @@ C:\Documents\Прога\TeamProjectHse272-2\TeamProjectHse272-2\obj\Debug\TeamPr
 C:\Documents\Прога\TeamProjectHse272-2\TeamProjectHse272-2\obj\Debug\TeamProjectHse272-2.csproj.GenerateResource.Cache
 C:\Documents\Прога\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\TeamProjectHse272-2.Data.dll
 C:\Documents\Прога\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\TeamProjectHse272-2.Data.pdb
-E:\TeamProjectHse272-2\TeamProjectHse272-2\obj\Debug\TeamProjectHse272-2_MarkupCompile.lref
-E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\TeamProjectHse272-2.Data.dll
-E:\TeamProjectHse272-2\TeamProjectHse272-2\bin\Debug\TeamProjectHse272-2.Data.pdb
