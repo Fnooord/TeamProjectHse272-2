@@ -120,6 +120,12 @@ namespace TeamProjectHse272_2 {
             return;
             case 2:
             this.dataGridMain = ((System.Windows.Controls.DataGrid)(target));
+            
+            #line 22 "..\..\MainWindow.xaml"
+            this.dataGridMain.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.dataGridMain_SelectionChanged);
+            
+            #line default
+            #line hidden
             return;
             case 3:
             this.Add = ((System.Windows.Controls.Button)(target));
