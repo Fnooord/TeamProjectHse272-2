@@ -75,11 +75,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Category.cs" />
-    <Compile Include="CategoryRepository.cs" />
-    <Compile Include="Context.cs" />
-    <Compile Include="ICategoryRepository.cs" />
-    <Compile Include="IProductRepository.cs" />
     <Compile Include="Logic.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -87,8 +82,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Product.cs" />
-    <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -119,6 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeamProjectHse272-2.Data\TeamProjectHse272-2.Data.csproj">
+      <Project>{7ad9df1a-c708-4a64-81ac-fa97e98d040d}</Project>
+      <Name>TeamProjectHse272-2.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

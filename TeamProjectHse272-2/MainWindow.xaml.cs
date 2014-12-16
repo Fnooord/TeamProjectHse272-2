@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.Entity;
+using TeamProjectHse272_2.Data;
 
 namespace TeamProjectHse272_2
 {
@@ -22,6 +23,7 @@ namespace TeamProjectHse272_2
     public partial class MainWindow : Window
     {
         private Context db = new Context();
+
         public MainWindow()
         {
             //Logic.DbInitialization();
