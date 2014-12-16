@@ -8,11 +8,11 @@ namespace TeamProjectHse272_2
 {
     class CategoryRepository: ICategoryRepository
     {
-        //private Context _context = new Context();
+        private Context _context = new Context();
 
         public IQueryable<Category> GetCategories()
         {
-            //return _context.Categories;
+            return _context.Categories;
         }
     }
 }

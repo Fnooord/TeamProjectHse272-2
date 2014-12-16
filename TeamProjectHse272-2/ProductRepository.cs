@@ -8,11 +8,11 @@ namespace TeamProjectHse272_2
 {
     class ProductRepository: IProductRepository
     {
-        //private Context _context = new Context();
+        private Context _context = new Context();
 
         public IQueryable<Product> GetProducts()
         {
-            //return _context.Products.Include(p => p.Category);
+            return _context.Products;
         }
     }
 }
