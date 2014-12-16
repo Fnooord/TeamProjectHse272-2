@@ -3,6 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="AddEditWindow" Height="300" Width="300">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130" />
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Name="Cancel" VerticalAlignment="Center" Margin="5" Click="Cancel_Click" Width="60" Height="30">Cancel</Button>
+        <Button Grid.Row="5" HorizontalAlignment="Stretch" Name="AddItem" VerticalAlignment="Center" Margin="5" Click="AddItem_Click" Width="60" Height="30">Add</Button>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="NameBox" VerticalContentAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="CompanyBox" VerticalContentAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="PriceBox" VerticalContentAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="AmountBox" VerticalContentAlignment="Center" TextChanged="AmountBox_TextChanged"/>
+        <ComboBox Grid.Row="4" Grid.Column="1" Name="ComboItem" VerticalAlignment="Center" Width="100"/>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Name</TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2"></TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">Company Name</TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3">Amount</TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2">Price</TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4">Item Type</TextBlock>
     </Grid>
 </Window>

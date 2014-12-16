@@ -23,5 +23,15 @@ namespace TeamProject272_2
         {
             InitializeComponent();
         }
+
+        private void AddItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
