@@ -12,6 +12,12 @@
     MinHeight="460"
     MinWidth="700" Loaded="Window_Loaded">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFDA2121" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="70"/>
@@ -25,7 +31,7 @@
             <ColumnDefinition Width="235*"/>
             <ColumnDefinition Width="120"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Margin="10,0,0,10" Grid.RowSpan="6" x:Name="dataGridMain" ItemsSource="{Binding Products}" Grid.ColumnSpan="2"/>
+        <DataGrid Margin="10,10,0,10" Grid.RowSpan="6" x:Name="dataGridMain" ItemsSource="{Binding Products}" Grid.ColumnSpan="2" Background="Black" BorderBrush="Black"/>
         <Button x:Name="Add" Margin="5" Grid.Column="2" Height="60" Width="110" Click="Add_Click" Content="Add"/>
         <Button x:Name="Delete" Margin="5" Grid.Column="2" Grid.Row="2" Click="Delete_Click" Content="Delete"/>
         <Button x:Name="Edit" Margin="5" Grid.Column="2" Grid.Row="1" Click="Edit_Click" Content="Edit"/>

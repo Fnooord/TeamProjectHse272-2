@@ -36,7 +36,6 @@ namespace TeamProjectHse272_2
 
         private void AddItem_Click(object sender, RoutedEventArgs e)
         {
-
             Close();
         }
 
