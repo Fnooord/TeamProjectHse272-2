@@ -154,3 +154,10 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+*.cache
+*.dll
+*.exe
+TeamProjectHse272-2.v12.suo
+*.suo
+*.exe
+TeamProjectHse272-2.v12.suo
