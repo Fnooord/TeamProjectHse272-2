@@ -31,24 +31,51 @@ namespace TeamProjectHse272_2
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindow addwindow = new AddEditWindow();
+            var newProduct = new Product { };
+            var addwindow = new AddEditWindow
+            {
+                DataContext = new ProductEditViewModel
+                {
+                    Product = newProduct,
+                    Categories = db.Categories.Local,
+                    Title = "Add"
+                }
+            };
+            addwindow.SaveClick += (s, args) =>
+            {
+                db.Products.Add(newProduct);
+            };
             addwindow.ShowDialog();
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindow editwindow = new AddEditWindow(db.Products.ElementAt(dataGridMain.SelectedIndex).Model, db.Products.ElementAt(dataGridMain.SelectedIndex).Producer, db.Products.ElementAt(dataGridMain.SelectedIndex).Price, db.Products.ElementAt(dataGridMain.SelectedIndex).Quantity, db.Products.ElementAt(dataGridMain.SelectedIndex).Category, "Edit");
+            var selectedProduct = dataGridMain.SelectedItem as Product;
+            if (selectedProduct == null)
+            {
+                return;
+            }
+            var editwindow = new AddEditWindow
+            {
+                DataContext = new ProductEditViewModel
+                {
+                    Product = selectedProduct,
+                    Categories = db.Categories.Local,
+                    Title = "Save"
+                }
+            };
+            
             editwindow.ShowDialog();
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            foreach (Product p in db.Products)
+            var selectedProduct = dataGridMain.SelectedItem as Product;
+            if (selectedProduct == null)
             {
-                if (p.Id == dataGridMain.SelectedIndex)
-                    db.Products.Remove(p);
-            }            
-            //[dataGridMain.SelectedIndex]
+                return;
+            }
+            db.Products.Remove(selectedProduct);
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -69,6 +96,7 @@ namespace TeamProjectHse272_2
             // Загрузите данные, установив свойство CollectionViewSource.Source:
             // productViewSource.Source = [универсальный источник данных]
             db.Products.Load();
+            db.Categories.Load();
             DataContext =
                 new StoreViewModel
                 {

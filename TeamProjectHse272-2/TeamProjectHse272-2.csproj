@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ProductEditViewModel.cs" />
     <Compile Include="StoreViewModel.cs" />
     <Page Include="AddEditWindow.xaml">
       <SubType>Designer</SubType>
