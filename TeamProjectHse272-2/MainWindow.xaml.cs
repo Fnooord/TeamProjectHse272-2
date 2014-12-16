@@ -24,9 +24,9 @@ namespace TeamProjectHse272_2
     {
         private Context db = new Context();
 
+
         public MainWindow()
         {
-            //Logic.DbInitialization();
             InitializeComponent();
         }
 
