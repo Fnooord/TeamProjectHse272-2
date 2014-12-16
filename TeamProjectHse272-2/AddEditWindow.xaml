@@ -22,7 +22,7 @@
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Product.Producer}" VerticalContentAlignment="Center" Margin="0,5,5,0"/>
         <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Product.Price}" VerticalContentAlignment="Center" Margin="0,5,5,0"/>
         <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Product.Quantity}" VerticalContentAlignment="Center" Margin="0,5,5,0"/>
-        <ComboBox Grid.Row="4" Grid.Column="1" Name="ComboItem" VerticalAlignment="Center" Width="100"/>
+        <ComboBox Grid.Row="4" Grid.Column="1" Name="ComboItem" VerticalAlignment="Center" Width="100" ItemsSource="{Binding Categories}" SelectedItem="{Binding Product.Category}"/>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Model</TextBlock>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2"></TextBlock>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">Producer</TextBlock>

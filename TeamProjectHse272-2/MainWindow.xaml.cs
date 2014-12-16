@@ -37,7 +37,7 @@ namespace TeamProjectHse272_2
                 DataContext = new ProductEditViewModel
                 {
                     Product = newProduct,
-                    Categories = new List<Category>(),
+                    Categories = db.Categories.Local,
                     Title = "Add"
                 }
             };
@@ -60,7 +60,7 @@ namespace TeamProjectHse272_2
                 DataContext = new ProductEditViewModel
                 {
                     Product = selectedProduct,
-                    Categories = new List<Category>(),
+                    Categories = db.Categories.Local,
                     Title = "Save"
                 }
             };
@@ -96,6 +96,7 @@ namespace TeamProjectHse272_2
             // Загрузите данные, установив свойство CollectionViewSource.Source:
             // productViewSource.Source = [универсальный источник данных]
             db.Products.Load();
+            db.Categories.Load();
             DataContext =
                 new StoreViewModel
                 {

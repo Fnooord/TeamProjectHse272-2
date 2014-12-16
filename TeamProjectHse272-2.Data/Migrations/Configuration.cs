@@ -15,11 +15,20 @@ namespace TeamProjectHse272_2.Data.Migrations
 
         protected override void Seed(TeamProjectHse272_2.Data.Context context)
         {
-            if (!context.Categories.Any(c => c.Name == "Smartphone"))
+            var categories =
+                new[]
+                {
+                    new Category { Name = "Smartphone" },
+                    new Category { Name = "TV"},
+                    new Category { Name = "PC"}
+                };
+            foreach (var category in categories)
             {
-                context.Categories.Add(
-                    new Category { Name = "Smartphone" });
-                context.SaveChanges();
+                if (!context.Categories.Any(c => c.Name == category.Name))
+                {
+                    context.Categories.Add(category);
+                    context.SaveChanges();
+                }
             }
 
             if (!context.Products.Any(p => p.Producer=="Sony" && p.Model=="Xperia"))
