@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TeamProjectHse272_2.Data;
 
 namespace TeamProjectHse272_2
 {
@@ -19,23 +20,20 @@ namespace TeamProjectHse272_2
     /// </summary>
     public partial class AddEditWindow : Window
     {
+        public event EventHandler SaveClick;
+
         public AddEditWindow()
         {
             InitializeComponent();
         }
 
-        public AddEditWindow(string model, string producer, decimal price, int quantity, TeamProjectHse272_2.Data.Category category, string buttonname)
-        {
-            ModelBox.Text = model;
-            ProducerBox.Text = producer;
-            PriceBox.Text = price.ToString();
-            QuantityBox.Text = quantity.ToString();
-            ComboItem.Text = category.Name;
-            AddItem.Content = buttonname;
-        }
-
         private void AddItem_Click(object sender, RoutedEventArgs e)
         {
+            var saveClick = SaveClick;
+            if (saveClick != null)
+            {
+                saveClick(this, EventArgs.Empty);
+            }
 
             Close();
         }

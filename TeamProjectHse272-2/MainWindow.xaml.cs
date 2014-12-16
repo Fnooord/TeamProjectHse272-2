@@ -31,13 +31,40 @@ namespace TeamProjectHse272_2
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindow addwindow = new AddEditWindow();
+            var newProduct = new Product { };
+            var addwindow = new AddEditWindow
+            {
+                DataContext = new ProductEditViewModel
+                {
+                    Product = newProduct,
+                    Categories = new List<Category>(),
+                    Title = "Add"
+                }
+            };
+            addwindow.SaveClick += (s, args) =>
+            {
+                db.Products.Add(newProduct);
+            };
             addwindow.ShowDialog();
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindow editwindow = new AddEditWindow(db.Products.ElementAt(dataGridMain.SelectedIndex).Model, db.Products.ElementAt(dataGridMain.SelectedIndex).Producer, db.Products.ElementAt(dataGridMain.SelectedIndex).Price, db.Products.ElementAt(dataGridMain.SelectedIndex).Quantity, db.Products.ElementAt(dataGridMain.SelectedIndex).Category, "Edit");
+            var selectedProduct = dataGridMain.SelectedItem as Product;
+            if (selectedProduct == null)
+            {
+                return;
+            }
+            var editwindow = new AddEditWindow
+            {
+                DataContext = new ProductEditViewModel
+                {
+                    Product = selectedProduct,
+                    Categories = new List<Category>(),
+                    Title = "Save"
+                }
+            };
+            
             editwindow.ShowDialog();
         }
 
