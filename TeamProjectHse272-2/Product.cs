@@ -12,6 +12,7 @@ namespace TeamProjectHse272_2
         public string Producer { get; set; }
         public string Model { get; set; }
         public decimal Price { get; set; }
+        public int Quantity { get; set; }
         public int CategotyId { get; set; }
         public virtual Category category { get; set; }
     }

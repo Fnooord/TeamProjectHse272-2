@@ -22,19 +22,18 @@ namespace TeamProjectHse272_2
     {
         public MainWindow()
         {
+            Logic.DbInitialization();
             InitializeComponent();
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindow addwindow = new AddEditWindow();
-            addwindow.ShowDialog();
+
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindow editwindow = new AddEditWindow();
-            editwindow.ShowDialog();
+
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
@@ -45,6 +44,14 @@ namespace TeamProjectHse272_2
         private void Save_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            System.Windows.Data.CollectionViewSource categoryViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("categoryViewSource")));
+            // Загрузите данные, установив свойство CollectionViewSource.Source:
+            // categoryViewSource.Source = [универсальный источник данных]
         }
     }
 }
