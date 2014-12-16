@@ -9,9 +9,10 @@ namespace TeamProjectHse272_2
     class Product
     {
         public int Id { get; set; }
-        public virtual Category category { get; set; }
         public string Producer { get; set; }
         public string Model { get; set; }
         public decimal Price { get; set; }
+        public int CategotyId { get; set; }
+        public virtual Category category { get; set; }
     }
 }

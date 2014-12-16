@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace TeamProjectHse272_2
 {
-    class Category
+    class Context: DbContext
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public virtual List<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

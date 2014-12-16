@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace TeamProjectHse272_2
 {
-    class Category
+    interface ICategoryRepository
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public virtual List<Product> Products { get; set; }
+        IQueryable<Category> GetCategories();
     }
 }
