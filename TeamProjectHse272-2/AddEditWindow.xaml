@@ -28,6 +28,6 @@
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">Producer</TextBlock>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3">Quantity</TextBlock>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2">Price</TextBlock>
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4">Item Type</TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4">Category</TextBlock>
     </Grid>
 </Window>
