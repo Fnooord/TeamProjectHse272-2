@@ -5,9 +5,11 @@
         Title="MainWindow" Height="460" Width="700" MinHeight="460" MinWidth="700" Loaded="Window_Loaded">
     <Window.Resources>
         <CollectionViewSource x:Key="categoryViewSource" d:DesignSource="{d:DesignInstance {x:Type local:Category}, CreateList=True}"/>
+        <CollectionViewSource x:Key="categoryProductsViewSource" Source="{Binding Products, Source={StaticResource categoryViewSource}}"/>
+        <CollectionViewSource x:Key="productViewSource" d:DesignSource="{d:DesignInstance {x:Type local:Product}, CreateList=True}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource categoryViewSource}">
-            <Grid.RowDefinitions>
+        <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="70"/>
             <RowDefinition Height="70"/>
@@ -16,13 +18,14 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="235*"/>
             <ColumnDefinition Width="120"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Margin="5" Grid.RowSpan="7" x:Name="dataGridMain" ItemsSource="{Binding}"/>
-        <Button x:Name="Add" Margin="5" Grid.Column="1" Height="60" Width="110" Click="Add_Click" Content="Add"/>
+        <DataGrid Margin="10,0,0,10" Grid.RowSpan="6" x:Name="dataGridMain" ItemsSource="{Binding Source={StaticResource productViewSource}}" Grid.ColumnSpan="2"/>
+        <Button x:Name="Add" Margin="5" Grid.Column="2" Height="60" Width="110" Click="Add_Click" Content="Add"/>
         <Button x:Name="Delete" Margin="5" Grid.Column="2" Grid.Row="2" Click="Delete_Click" Content="Delete"/>
-        <Button x:Name="Edit" Margin="5" Grid.Column="1" Grid.Row="1" Click="Edit_Click" Content="Edit"/>
-        <Button x:Name="Save" Margin="5" Grid.Column="1" Grid.Row="5" Width="110" Height="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Save_Click" Content="Save"/>
+        <Button x:Name="Edit" Margin="5" Grid.Column="2" Grid.Row="1" Click="Edit_Click" Content="Edit"/>
+        <Button x:Name="Save" Margin="0,0,5,5" Grid.Column="2" Grid.Row="5" Width="110" Height="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Save_Click" Content="Save"/>
     </Grid>
 </Window>

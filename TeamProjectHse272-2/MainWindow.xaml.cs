@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace TeamProjectHse272_2
 {
@@ -20,9 +21,10 @@ namespace TeamProjectHse272_2
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Context db = new Context();
         public MainWindow()
         {
-            Logic.DbInitialization();
+            //Logic.DbInitialization();
             InitializeComponent();
         }
 
@@ -43,15 +45,24 @@ namespace TeamProjectHse272_2
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
+            foreach (var category in db.Categories.Local.ToList())
+            {
+                if (category == null)
+                {
+                    db.Categories.Remove(category);
+                }
+            }
+            db.SaveChanges();
+            this.dataGridMain.Items.Refresh();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-            System.Windows.Data.CollectionViewSource categoryViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("categoryViewSource")));
+            System.Windows.Data.CollectionViewSource productViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("productViewSource")));
             // Загрузите данные, установив свойство CollectionViewSource.Source:
-            // categoryViewSource.Source = [универсальный источник данных]
+            // productViewSource.Source = [универсальный источник данных]
+            db.Products.Load();
+            productViewSource.Source = db.Products.Local;
         }
     }
 }
