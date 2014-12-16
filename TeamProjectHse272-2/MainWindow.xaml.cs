@@ -27,12 +27,14 @@ namespace TeamProjectHse272_2
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-
+            AddEditWindow addwindow = new AddEditWindow();
+            addwindow.ShowDialog();
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-
+            AddEditWindow editwindow = new AddEditWindow();
+            editwindow.ShowDialog();
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
