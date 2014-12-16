@@ -24,6 +24,15 @@ namespace TeamProjectHse272_2
             InitializeComponent();
         }
 
+        public AddEditWindow (string model, string producer, double price, int quantity, TeamProjectHse272_2.Data.Category category)
+        {
+            NameBox.Text = model;
+            CompanyBox.Text = producer;
+            PriceBox.Text = price.ToString();
+            AmountBox.Text = quantity.ToString();
+            ComboItem.Text = category.Name;
+        }
+
         private void AddItem_Click(object sender, RoutedEventArgs e)
         {
 
