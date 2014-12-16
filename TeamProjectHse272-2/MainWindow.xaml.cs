@@ -70,12 +70,12 @@ namespace TeamProjectHse272_2
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            foreach (Product p in db.Products)
+            var selectedProduct = dataGridMain.SelectedItem as Product;
+            if (selectedProduct == null)
             {
-                if (p.Id == dataGridMain.SelectedIndex)
-                    db.Products.Remove(p);
-            }            
-            //[dataGridMain.SelectedIndex]
+                return;
+            }
+            db.Products.Remove(selectedProduct);
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
