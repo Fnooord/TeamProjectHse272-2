@@ -154,4 +154,8 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
-TeamProjectHse272-2/bin/Debug/TeamProjectHse272-2.vshost.exe
+*.cache
+*.dll
+*.exe
+TeamProjectHse272-2.v12.suo
+*.suo
