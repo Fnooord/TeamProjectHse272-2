@@ -65,7 +65,8 @@ namespace TeamProjectHse272_2
                     Product = selectedProduct,
                     Categories = db.Categories.Local,
                     Title = "Save"
-                }
+                },
+                Owner = this
             };
             
             editwindow.ShowDialog();
