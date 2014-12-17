@@ -22,11 +22,14 @@ namespace TeamProjectHse272_2
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Context db = new Context();
+        private IContextFactory contextFactory = new ContextFactory();
+        private IContext db;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            db = contextFactory.Create();
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
@@ -80,28 +83,31 @@ namespace TeamProjectHse272_2
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var category in db.Categories.Local.ToList())
-            {
-                if (category == null)
-                {
-                    db.Categories.Remove(category);
-                }
-            }
             db.SaveChanges();
             this.dataGridMain.Items.Refresh();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            // Загрузите данные, установив свойство CollectionViewSource.Source:
-            // productViewSource.Source = [универсальный источник данных]
+            Progress.IsIndeterminate = true;
+            Task.Factory.StartNew(LoadDatabase)
+                .ContinueWith((task) => DisplayData(), TaskScheduler.FromCurrentSynchronizationContext());
+        }
+
+        private void LoadDatabase()
+        {
             db.Products.Load();
             db.Categories.Load();
+        }
+
+        private void DisplayData()
+        {
             DataContext =
                 new StoreViewModel
                 {
                     Products = db.Products.Local
                 };
+            Progress.IsIndeterminate = false;
         }
     }
 }
