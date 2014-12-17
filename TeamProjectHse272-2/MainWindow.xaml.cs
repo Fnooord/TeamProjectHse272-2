@@ -113,6 +113,12 @@ namespace TeamProjectHse272_2
 
         private void Cart_Click(object sender, RoutedEventArgs e)
         {
+            Cart cart = new Cart();
+            cart.Show();
+        }
+
+        private void AddToCart_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
