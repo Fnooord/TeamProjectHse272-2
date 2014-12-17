@@ -119,7 +119,7 @@ namespace TeamProjectHse272_2
 
         private void AddToCart_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
     }
 }
