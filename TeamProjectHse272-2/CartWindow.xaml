@@ -14,7 +14,14 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="120"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="CartGrid" Grid.RowSpan="5" Margin="5">
+        <DataGrid Margin="5" Grid.RowSpan="5" x:Name="cartGrid" ItemsSource="{Binding Items}" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Category" Binding="{Binding Product.Category}" />
+                <DataGridTextColumn Header="Producer" Binding="{Binding Product.Producer}" />
+                <DataGridTextColumn Header="Model" Binding="{Binding Product.Model}" Width="*" />
+                <DataGridTextColumn Header="Price" Binding="{Binding Product.Price}" />
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+            </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="Delete" Margin="5" Grid.Column="1" Grid.Row="0" Click="Delete_Click" Content="Delete"/>
         <Button x:Name="Clear" Margin="5" Grid.Column="1" Grid.Row="1" Click="Clear_Click" Content="Clear"/>

@@ -20,11 +20,8 @@ namespace TeamProjectHse272_2
     /// </summary>
     public partial class CartWindow : Window
     {
-        public Cart cart;
         public CartWindow()
         {
-            cart = new Cart();
-
             InitializeComponent();
         }
 
