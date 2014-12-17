@@ -23,6 +23,8 @@ namespace TeamProjectHse272_2
         public Cart cart;
         public CartWindow()
         {
+            cart = new Cart();
+
             InitializeComponent();
         }
 
