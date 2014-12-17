@@ -16,6 +16,7 @@ namespace TeamProjectHse272_2.Data
             : base("MyConnection")
         {
             Database.SetInitializer<Context>(new CreateDatabaseIfNotExists<Context>());
+            Configuration.ProxyCreationEnabled = false;
         }
     }
 }

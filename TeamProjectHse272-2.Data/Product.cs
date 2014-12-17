@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamProjectHse272_2.Data
 {
+    [Serializable]
     public class Product
     {
         public int Id { get; set; }
