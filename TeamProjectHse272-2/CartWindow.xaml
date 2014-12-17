@@ -28,6 +28,6 @@
         <Button x:Name="Save" Margin="0,0,5,5" Grid.Column="1" Grid.Row="4" Width="110" Height="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Save_Click" Content="Save"/>
         <Label x:Name="Count" Margin="5" Grid.Column="1" Grid.Row="2" Width="110" Height="60"/>
         <TextBox x:Name="NameOfTheCart" Margin="5,35,5,5" Grid.Column="1" Grid.Row="3"></TextBox>
-        <TextBlock Margin="5,5,5,5" Grid.Column="1" Grid.Row="3">Name of the Cart</TextBlock>
+        <TextBlock Margin="5,5,5,40" Grid.Column="1" Grid.Row="3">Name of the Cart</TextBlock>
     </Grid>
 </Window>
