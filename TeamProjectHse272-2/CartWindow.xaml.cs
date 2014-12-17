@@ -63,11 +63,19 @@ namespace TeamProjectHse272_2
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            using (Stream cartStream = File.OpenWrite("Cart"))
+            if (NameOfTheCart.Text != "")
+            {
+                using (Stream cartStream = File.OpenWrite(NameOfTheCart.Text))
             {
                 BinaryFormatter serializer = new BinaryFormatter();
                 serializer.Serialize(cartStream, DataContext);
             }
+            }
+            else
+            {
+                MessageBox.Show("Enter the name!", "Error!");
+            }
+            
         }
     }
 }
