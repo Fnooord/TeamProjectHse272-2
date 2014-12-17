@@ -115,5 +115,10 @@ namespace TeamProjectHse272_2
             Cart cart = new Cart();
             cart.Show();
         }
+
+        private void AddToCart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
