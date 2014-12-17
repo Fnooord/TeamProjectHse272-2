@@ -7,9 +7,9 @@
     mc:Ignorable="d"
     x:Class="TeamProjectHse272_2.MainWindow"
     Title="MainWindow"
-    Height="492.836"
+    Height="480"
     Width="700"
-    MinHeight="460"
+    MinHeight="480"
     MinWidth="700" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
@@ -26,7 +26,15 @@
             <ColumnDefinition Width="235*"/>
             <ColumnDefinition Width="120"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Margin="5" Grid.RowSpan="6" x:Name="dataGridMain" ItemsSource="{Binding Products}" Grid.ColumnSpan="2"/>
+        <DataGrid Margin="5" Grid.RowSpan="6" x:Name="dataGridMain" ItemsSource="{Binding Products}" Grid.ColumnSpan="2" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Category" Binding="{Binding Category}" />
+                <DataGridTextColumn Header="Producer" Binding="{Binding Producer}" />
+                <DataGridTextColumn Header="Model" Binding="{Binding Model}" Width="*" />
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+            </DataGrid.Columns>
+        </DataGrid>
         <Button x:Name="Add" Margin="5" Grid.Column="2" Grid.Row="0" Click="Add_Click" Content="Add"/>
         <Button x:Name="Edit" Margin="5" Grid.Column="2" Grid.Row="1" Click="Edit_Click" Content="Edit"/>
         <Button x:Name="Delete" Margin="5" Grid.Column="2" Grid.Row="2" Click="Delete_Click" Content="Delete"/>
