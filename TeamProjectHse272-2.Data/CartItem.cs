@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamProjectHse272_2.Data
 {
-    class CartItem
+    public class CartItem
     {
         public Product Item { get; set; }
         public int Quantity { get; set; }

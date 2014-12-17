@@ -6,18 +6,26 @@ using System.Threading.Tasks;
 
 namespace TeamProjectHse272_2.Data
 {
-    class Cart
+    public class Cart
     {
-        public List<CartItem> ProductsInCart { get; set; }
-        public decimal TotalPrice { get; set; }
-        public decimal GetTotalPrice (List<CartItem> list)
+        public List<CartItem> Items { get; private set; }
+        
+        public decimal TotalPrice
         {
-            decimal total = 0;
-            foreach (CartItem ci in list)
+            get
             {
-                total += (ci.Item.Price * ci.Quantity);
+                decimal total = 0;
+                foreach (CartItem ci in Items)
+                {
+                    total += (ci.Item.Price * ci.Quantity);
+                }
+                return total;
             }
-            return total;
+        }
+
+        public Cart()
+        {
+            Items = new List<CartItem>();
         }
     }
 }
