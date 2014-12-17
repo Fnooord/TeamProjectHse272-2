@@ -65,7 +65,8 @@ namespace TeamProjectHse272_2
                     Product = selectedProduct,
                     Categories = db.Categories.Local,
                     Title = "Save"
-                }
+                },
+                Owner = this
             };
             
             editwindow.ShowDialog();
@@ -112,8 +113,13 @@ namespace TeamProjectHse272_2
 
         private void Cart_Click(object sender, RoutedEventArgs e)
         {
-            CartWindow cart = new CartWindow();
+            Cart cart = new Cart();
             cart.Show();
+        }
+
+        private void AddToCart_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

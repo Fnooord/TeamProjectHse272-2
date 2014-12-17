@@ -39,6 +39,7 @@
         <Button x:Name="Edit" Margin="5" Grid.Column="2" Grid.Row="1" Click="Edit_Click" Content="Edit"/>
         <Button x:Name="Delete" Margin="5" Grid.Column="2" Grid.Row="2" Click="Delete_Click" Content="Delete"/>
         <Button x:Name="Cart" Margin="5" Grid.Column="2" Grid.Row="3" Click="Cart_Click" Content="Open Cart"/>
+        <Button x:Name="AddToCart" Margin="5" Grid.Column="2" Grid.Row="4" Click="AddToCart_Click" Content="AddTo Cart"/>
         <Button x:Name="Save" Margin="5" Grid.Column="2" Grid.Row="5" Click="Save_Click" Content="Save" Height="60" VerticalAlignment="Bottom"/>
         <ProgressBar x:Name="Progress" Margin="5" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" Height="10"/>
     </Grid>
