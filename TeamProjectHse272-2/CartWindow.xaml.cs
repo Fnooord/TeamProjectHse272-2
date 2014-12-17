@@ -57,6 +57,8 @@ namespace TeamProjectHse272_2
         private void Refresh()
         {
             cartGrid.Items.Refresh();
+            BindingOperations.GetBindingExpressionBase(
+                total, Label.ContentProperty).UpdateTarget();
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
