@@ -42,7 +42,7 @@ namespace TeamProjectHse272_2
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Stream CartStream = File.Create("Cart");
+            Stream CartStream = File.OpenWrite("Cart");
             BinaryFormatter serializer = new BinaryFormatter();
             serializer.Serialize(CartStream, cart);
             CartStream.Close();
