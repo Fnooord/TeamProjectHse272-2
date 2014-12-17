@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TeamProjectHse272_2.Data;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace TeamProjectHse272_2
 {
@@ -40,7 +42,10 @@ namespace TeamProjectHse272_2
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            
+            Stream CartStream = File.Create("Cart");
+            BinaryFormatter serializer = new BinaryFormatter();
+            serializer.Serialize(CartStream, cart);
+            CartStream.Close();
         }
     }
 }
