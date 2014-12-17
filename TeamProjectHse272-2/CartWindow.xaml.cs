@@ -28,13 +28,35 @@ namespace TeamProjectHse272_2
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
-        {
-
+        {            
+            var cart = DataContext as Cart;
+            if (cart == null)
+            {
+                return;
+            }
+            cart.Items.Clear();
+            Refresh();
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
+            var selectedItem = cartGrid.SelectedItem as CartItem;
+            if (selectedItem == null)
+            {
+                return;
+            }
+            var cart = DataContext as Cart;
+            if (cart == null)
+            {
+                return;
+            }
+            cart.Items.Remove(selectedItem);
+            Refresh();
+        }
 
+        private void Refresh()
+        {
+            cartGrid.Items.Refresh();
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
