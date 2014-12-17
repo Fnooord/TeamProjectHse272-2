@@ -11,15 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TeamProjectHse272_2.Data;
 
 namespace TeamProjectHse272_2
 {
     /// <summary>
     /// Interaction logic for Cart.xaml
     /// </summary>
-    public partial class Cart : Window
+    public partial class CartWindow : Window
     {
-        public Cart()
+        public Cart cart;
+        public CartWindow()
         {
             InitializeComponent();
         }

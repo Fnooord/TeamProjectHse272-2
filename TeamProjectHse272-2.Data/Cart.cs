@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamProjectHse272_2.Data
 {
-    class Cart
+    public class Cart
     {
         public List<CartItem> ProductsInCart { get; set; }
         public decimal TotalPrice { get; set; }
