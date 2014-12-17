@@ -39,10 +39,10 @@ namespace TeamProjectHse272_2
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            using (Stream CartStream = File.Create("Cart"))
+            using (Stream cartStream = File.OpenWrite("Cart"))
             {
                 BinaryFormatter serializer = new BinaryFormatter();
-                serializer.Serialize(CartStream, DataContext);
+                serializer.Serialize(cartStream, DataContext);
             }
         }
     }
