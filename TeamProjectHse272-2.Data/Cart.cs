@@ -17,7 +17,7 @@ namespace TeamProjectHse272_2.Data
                 decimal total = 0;
                 foreach (CartItem ci in Items)
                 {
-                    total += (ci.Item.Price * ci.Quantity);
+                    total += (ci.Product.Price * ci.Quantity);
                 }
                 return total;
             }

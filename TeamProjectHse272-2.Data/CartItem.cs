@@ -8,7 +8,7 @@ namespace TeamProjectHse272_2.Data
 {
     public class CartItem
     {
-        public Product Item { get; set; }
+        public Product Product { get; set; }
         public int Quantity { get; set; }
     }
 }
