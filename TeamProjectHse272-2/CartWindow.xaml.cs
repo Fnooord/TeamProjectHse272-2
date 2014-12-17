@@ -42,7 +42,16 @@ namespace TeamProjectHse272_2
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Stream CartStream = File.OpenWrite("Cart");
+            Stream CartStream;
+            if (CartName.Text != "")
+            {
+                CartStream = File.OpenWrite(CartName.Text);
+            }
+            else
+            {
+                CartStream = null;
+                MessageBox.Show("Enter the name!");
+            }
             BinaryFormatter serializer = new BinaryFormatter();
             serializer.Serialize(CartStream, cart);
             CartStream.Close();
