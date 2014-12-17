@@ -22,11 +22,8 @@ namespace TeamProjectHse272_2
     /// </summary>
     public partial class CartWindow : Window
     {
-        public Cart cart;
         public CartWindow()
         {
-            cart = new Cart();
-
             InitializeComponent();
         }
 
@@ -42,19 +39,19 @@ namespace TeamProjectHse272_2
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Stream CartStream;
-            if (CartName.Text != "")
+            if (NameOfTheCart.Text != "")
             {
-                CartStream = File.OpenWrite(CartName.Text);
+                using (Stream cartStream = File.OpenWrite(NameOfTheCart.Text))
+                {
+                    BinaryFormatter serializer = new BinaryFormatter();
+                    serializer.Serialize(cartStream, DataContext);
+                }
             }
             else
             {
-                CartStream = null;
-                MessageBox.Show("Enter the name!");
+                MessageBox.Show("Enter the name!", "Error!");
             }
-            BinaryFormatter serializer = new BinaryFormatter();
-            serializer.Serialize(CartStream, cart);
-            CartStream.Close();
+            
         }
     }
 }

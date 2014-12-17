@@ -24,6 +24,7 @@ namespace TeamProjectHse272_2
     {
         private IContextFactory contextFactory = new ContextFactory();
         private IContext db;
+        private Cart cart = new Cart();
 
         public MainWindow()
         {
@@ -113,13 +114,32 @@ namespace TeamProjectHse272_2
 
         private void Cart_Click(object sender, RoutedEventArgs e)
         {
-            CartWindow cart = new CartWindow();
-            cart.Show();
+            var cartWindow = new CartWindow
+            {
+                DataContext = cart,
+                Owner = this
+            };
+            cartWindow.Show();
         }
 
         private void AddToCart_Click(object sender, RoutedEventArgs e)
         {
+            var selectedProduct = dataGridMain.SelectedItem as Product;
+            if (selectedProduct == null)
+            {
+                return;
+            }
 
+            var existingItem = cart.Items.FirstOrDefault(i => i.Product == selectedProduct);
+            if (existingItem != null)
+            {
+                existingItem.Quantity += 1;
+            }
+            else
+            {
+                var item = new CartItem { Product = selectedProduct, Quantity = 1 };
+                cart.Items.Add(item);
+            }
         }
     }
 }
