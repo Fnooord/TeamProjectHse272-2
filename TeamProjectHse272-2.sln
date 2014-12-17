@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamProjectHse272-2", "Team
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamProjectHse272-2.Data", "TeamProjectHse272-2.Data\TeamProjectHse272-2.Data.csproj", "{7AD9DF1A-C708-4A64-81AC-FA97E98D040D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamProjectHse272-2.Data.Tests", "TeamProjectHse272-2.Data.Tests\TeamProjectHse272-2.Data.Tests.csproj", "{814D55C8-E036-4E64-89B2-457B8D4E3746}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7AD9DF1A-C708-4A64-81AC-FA97E98D040D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AD9DF1A-C708-4A64-81AC-FA97E98D040D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AD9DF1A-C708-4A64-81AC-FA97E98D040D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{814D55C8-E036-4E64-89B2-457B8D4E3746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{814D55C8-E036-4E64-89B2-457B8D4E3746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{814D55C8-E036-4E64-89B2-457B8D4E3746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{814D55C8-E036-4E64-89B2-457B8D4E3746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
