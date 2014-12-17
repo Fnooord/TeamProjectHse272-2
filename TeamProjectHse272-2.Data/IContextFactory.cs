@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TeamProjectHse272_2.Data
 {
-    interface IProductRepository
+    public interface IContextFactory
     {
-        IQueryable<Product> GetProducts();
+        IContext Create();
     }
 }

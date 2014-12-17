@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace TeamProjectHse272_2.Data
 {
-    public class Context : DbContext
+    public class Context : DbContext, IContext
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }

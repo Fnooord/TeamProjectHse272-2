@@ -48,13 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
-    <Compile Include="CategoryRepository.cs" />
     <Compile Include="Context.cs" />
-    <Compile Include="ICategoryRepository.cs" />
-    <Compile Include="IProductRepository.cs" />
+    <Compile Include="ContextFactory.cs" />
+    <Compile Include="IContext.cs" />
+    <Compile Include="IContextFactory.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
-    <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
