@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cart.cs" />
+    <Compile Include="CartItem.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="ContextFactory.cs" />

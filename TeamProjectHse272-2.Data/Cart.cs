@@ -8,15 +8,14 @@ namespace TeamProjectHse272_2.Data
 {
     class Cart
     {
-        public List<Product> ProductsInCart { get; set; }
+        public List<CartItem> ProductsInCart { get; set; }
         public decimal TotalPrice { get; set; }
-        public int TotalQuantity {get; set; }
-        public decimal GetTotalPrice (List<Product> list)
+        public decimal GetTotalPrice (List<CartItem> list)
         {
             decimal total = 0;
-            foreach (Product p in list)
+            foreach (CartItem ci in list)
             {
-                total += (p.Price * p.InCart);
+                total += (ci.Item.Price * ci.Quantity);
             }
             return total;
         }

@@ -13,7 +13,6 @@ namespace TeamProjectHse272_2.Data
         public string Model { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
-        public int InCart { get; set; }
         public virtual Category Category { get; set; }
     }
 }
