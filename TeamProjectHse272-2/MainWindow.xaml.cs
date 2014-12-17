@@ -109,5 +109,10 @@ namespace TeamProjectHse272_2
                 };
             Progress.IsIndeterminate = false;
         }
+
+        private void Cart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
